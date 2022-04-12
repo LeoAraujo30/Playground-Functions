@@ -13,18 +13,32 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let word = '';
+  let array =[];
+
+  for(let i = 0; i < string.length; i += 1){
+    if(string[i] === ' '){
+      array.push(word)
+    } else {
+      word += string[i]
+    }
+  }
+  return array
 }
+//let frase = 'go trybe';
+//console.log(splitSentence(frase))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let ultimoItem = array[array.length - 1]; 
+  let primeiroItem = array[0];
+  return ultimoItem + ', ' + primeiroItem
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + (ties * 1)
 }
 
 // Desafio 6

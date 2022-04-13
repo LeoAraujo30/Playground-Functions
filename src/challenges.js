@@ -69,44 +69,58 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numeros) {
   let array = [];
   for(let i = 0; i < numeros.length; i += 1) {
-    if(numeros[i] % 3 === 0) {
-      array.push('fizz')
-    }
-    if(numeros[i] % 5 === 0) {
-      array.push('buzz')
-    }
     if(numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
-      array.push('fizzBuzz')
-    } 
-    if(numeros[i] % 3 !== 0 && numeros[i] % 5 !== 0) {
-    array.push('bug!')
+      array.push('fizzBuzz');
+    } else if(numeros[i] % 3 === 0) {
+      array.push('fizz');
+    } else if(numeros[i] % 5 === 0) {
+      array.push('buzz');
+    } else {
+      array.push('bug!');
+    }
   }
   return array
-  }
 }
 
 // Desafio 9
 function encode(string) {
+  let string2 = '';
   for(let i = 0; i < string.length; i += 1){
     if (string[i] === 'a') {
-      string[i] = '1'
+      string2 += '1'
     } else if (string[i] === 'e') {
-      string[i] = '2'
+      string2 += '2'
     } else if (string[i] === 'i') {
-      string[i] = '3'
+      string2 += '3'
     } else if (string[i] === 'o') {
-      string[i] = '4'
+      string2 += '4'
     } else if (string[i] === 'u') {
-      string[i] = '5'
+      string2 += '5'
     } else {
-      string[i] = string[i]
+      string2 += string[i]
     }
   }
-  return string
+  return string2
 }
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let string2 = '';
+  for(let i = 0; i < string.length; i += 1){
+    if (string[i] === '1') {
+      string2 += 'a'
+    } else if (string[i] === '2') {
+      string2 += 'e'
+    } else if (string[i] === '3') {
+      string2 += 'i'
+    } else if (string[i] === '4') {
+      string2 += 'o'
+    } else if (string[i] === '5') {
+      string2 += 'u'
+    } else {
+      string2 += string[i]
+    }
+  }
+  return string2
 }
 
 // Desafio 10

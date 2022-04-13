@@ -47,19 +47,64 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaCat1 = cat1 - mouse; 
+  let distanciaCat2 = cat2 - mouse; 
+  let string = '';
+
+  if(distanciaCat1 < distanciaCat2 ) {
+    string = 'cat1'
+  } else if (distanciaCat1 > distanciaCat2) {
+    string = 'cat2'
+  } else {
+    string = 'os gatos trombam e o rato foge'
+  }
+  return string
 }
+//console.log(catAndMouse(0, 3, 2))
+//console.log(catAndMouse(10, 4, 22))
+//console.log(catAndMouse(1, 0, 2))
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let array = [];
+  for(let i = 0; i < numeros.length; i += 1) {
+    if(numeros[i] % 3 === 0) {
+      array.push('fizz')
+    }
+    if(numeros[i] % 5 === 0) {
+      array.push('buzz')
+    }
+    if(numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
+      array.push('fizzBuzz')
+    } 
+    if(numeros[i] % 3 !== 0 && numeros[i] % 5 !== 0) {
+    array.push('bug!')
+  }
+  return array
+  }
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  for(let i = 0; i < string.length; i += 1){
+    if (string[i] === 'a') {
+      string[i] = '1'
+    } else if (string[i] === 'e') {
+      string[i] = '2'
+    } else if (string[i] === 'i') {
+      string[i] = '3'
+    } else if (string[i] === 'o') {
+      string[i] = '4'
+    } else if (string[i] === 'u') {
+      string[i] = '5'
+    } else {
+      string[i] = string[i]
+    }
+  }
+  return string
 }
+
 function decode() {
   // seu código aqui
 }

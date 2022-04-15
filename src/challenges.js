@@ -48,8 +48,8 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaCat1 = cat1 - mouse; 
-  let distanciaCat2 = cat2 - mouse; 
+  let distanciaCat1 = Math.abs(cat1 - mouse); 
+  let distanciaCat2 = Math.abs(cat2 - mouse); 
   let string = '';
 
   if(distanciaCat1 < distanciaCat2 ) {
@@ -61,9 +61,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return string
 }
-//console.log(catAndMouse(0, 3, 2))
-//console.log(catAndMouse(10, 4, 22))
-//console.log(catAndMouse(1, 0, 2))
 
 // Desafio 8
 function fizzBuzz(numeros) {
@@ -124,8 +121,22 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let resultado;
+  if(array.length == 0) {
+    resultado = 'Vazio!'
+  }
+  let ordenado = array.sort()
+  let objeto = [];
+   for(let i in ordenado){
+      objeto[i] =
+        {
+          tech: ordenado[i],
+          name: name
+        }
+      resultado = objeto
+    }
+   return resultado
 }
 
 module.exports = {
